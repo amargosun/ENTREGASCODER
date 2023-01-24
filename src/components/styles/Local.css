@@ -1,0 +1,81 @@
+.local {
+    width: 100%;
+    height: 100vh;
+    background-position: 67%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.local-slide-1 {
+    background-image: url("../../../public/img/localsofi.png");
+}
+
+.local-container {
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 0.5fr 2fr 0.5fr;
+    height: 100%;
+}
+
+.local-container__text-box {
+    grid-column: 2;
+    grid-row: 2;
+    color: rgb(154, 113, 74);
+    text-align: center;
+    /* align-self: center;  */
+    opacity: 0.7;
+}
+
+.local-container__text-box h1 {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+
+.local-container__text-box p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 30px auto;
+    max-width: 360px;
+}
+
+.button-primary {
+    background-color: var(--pimary-color);
+    border: none;
+    font-family: var(--mulish-font);
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 20px auto;
+    width: 112px;
+    height: 36px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+    .local-container {
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr 2fr 1fr;
+    height: 100%;
+}
+
+    .local-container__text-box h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    margin-top: 110px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgb(194, 183, 83)
+    }
+
+    .local-container__text-box p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 420px;
+    text-shadow: 1px 1px 5px rgb(194, 183, 83)
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .local {
+    background-position: center;
+    }
+    .local-container__text-box h1 {
+    font-size: 4rem;
+    }
+} 
