@@ -13,7 +13,6 @@ export const ItemDetail = ({item})=>{
     }
     return(
         <div className='detail-container'>
-            {/* <p style={{width: "100%"}}>item detail</p> */}
             <div className='img-container'>
                 <img src={item.imagen} alt={item.nombre}/>
             </div>
@@ -22,7 +21,7 @@ export const ItemDetail = ({item})=>{
                 <h4 className='descriitemd'>{item.descripcion}</h4>
                 <h5>$ {item.precio}</h5>
             </div>
-            <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+            <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
             {
                 quantity>0 &&
                 <Link to="/cart">
