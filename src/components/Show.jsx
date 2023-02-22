@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
-import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore'
+import { collection, getDocs, deleteDoc, doc, startAfter } from 'firebase/firestore'
 import { db } from "../firebaseConfig/firebase.js"
 
 import Swal from 'sweetalert2'
@@ -29,7 +29,7 @@ const Show = ()=>{
     }
 
     // 5 funcion para la confirmación de la eliminacion (sweet alert)
-    const confirmDelete = ()=>{
+    const confirmDelete = (id)=>{
         Swal.fire({
             title: 'Está seguro de Eliminar el Registro?',
             text: "Esto no podrá Revertirse",
@@ -41,7 +41,7 @@ const Show = ()=>{
         })
         .then((result) => {
             if (result.isConfirmed) {
-                deleteProduct()
+                deleteProduct(id)
                 Swal.fire(
                 'Eliminado!',
                 'El Registro fue eliminado',
@@ -77,15 +77,17 @@ const Show = ()=>{
                         </thead>
                         <tbody>
                             {products.map((product)=>{
+                                return(
                                 <tr key={product.id}>
                                     <td>{product.id}</td>
                                     <td>{product.descripcion}</td>
                                     <td>{product.stock}</td>
                                     <td>
                                         <Link to={`/edit/${product.id}`} className="btn btn-light"><i className='fa-solid fa-pencil'></i></Link>
-                                        <button onClick={()=>{confirmDelete()}}></button>
+                                        <button onClick={()=>{confirmDelete(product.id)}} className="btn btn-danger"><i className='fa-solid fa-trash'></i></button>
                                     </td>
                                 </tr>
+                                )
                             })}
                         </tbody>
                     </table>
