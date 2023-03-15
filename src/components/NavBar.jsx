@@ -2,7 +2,7 @@ import React from 'react';
 import CartWidget from './CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-
+import { BrowserRouter as NavLink, Link } from 'react-router-dom';
 import './styles/NavBar.css';
 
 const NavBar = ({ background }) => {
@@ -14,16 +14,31 @@ const NavBar = ({ background }) => {
                     <span>Menu</span>
                 </div>
                 <ul className='nav'>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/">Productos <span className="arrow"></span></a>
-                        <ul>
-                            <li><a href="/">Maquillaje</a></li>
-                            <li><a href="/">Uñas</a></li>                    
-                            <li><a href="/">Servicios</a></li>                    
+                    <li className='linea-menu' >
+                        <Link to="/">Inicio</Link> 
+                    </li>
+                    <li className='linea-menu'><a >Productos <span className="arrow"></span></a>
+                        <ul className='submenu'>
+                            <li className='linea-subm'>
+                                <Link to="/">Catálogo</Link>
+                            </li>
+                            <li className='linea-subm'>
+                                <Link to="/productos/maquillaje">Maquillaje</Link>
+                            </li>
+                            <li className='linea-subm'>
+                                <Link to="/productos/uñas">Uñas</Link>
+                            </li>                    
+                            <li className='linea-subm'>
+                                <Link to="/productos/accesorios">Accesorios</Link>
+                            </li>                    
                         </ul>
                     </li>
-                    <li><a href="/">Nosotros</a></li>
-                    <li><a href="/">Contacto</a></li>
+                    <li className='linea-menu'>
+                        <Link to="/">Nosotros</Link>
+                    </li>
+                    <li className='linea-menu'>
+                        <Link to="/">Contacto</Link>
+                    </li>
                     <div className='cart'>
                         <CartWidget />
                     </div>

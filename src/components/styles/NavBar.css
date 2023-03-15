@@ -22,36 +22,43 @@ ul, ol {
     display: flex;
 }
 
-.nav li a {
+.linea-menu a {
     background-color:transparent;
     color:rgb(154, 113, 74);
     text-decoration:none;
     padding:10px 12px;
-    display:inline-block;
+    display:block;
+    width: 75px;
 }
 
-.nav li a:hover {
+.linea-menu a:hover {
     background-color:rgb(154, 113, 74) ;
     color:rgb(252, 252, 252);
 }
 
-.nav li ul {
+.linea-menu ul {
     display:none;
     position:absolute;
     min-width:140px;
 }
 
-.nav li:hover > ul {
+.linea-menu:hover > ul {
     display:block;
+    background-color:rgb(237, 235, 233) ;
+    color:rgb(252, 252, 252);
 }
 
-.nav li ul li {
+.linea-menu ul li {
     position:relative;
 }
 
-.nav li ul li ul {
-    right:-140px;
-    top:0px;
+.linea-subm a {
+    background-color:transparent;
+    color:rgb(154, 113, 74);
+    text-decoration:none;
+    padding:10px 12px;
+    display:inline-block;
+    width: 115px;
 }
 
 .arrow::after {

@@ -1,0 +1,7 @@
+.item-detail-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(224, 229, 204);
+}

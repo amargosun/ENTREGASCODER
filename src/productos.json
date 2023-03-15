@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "nombre": "BOLSA DE MAQUILLAJE",
+        "descripcion": "Juego de 34 piezas de maquillaje de regalo, todo en uno, kit completo para mujer, kit completo de brochas Cosmetic Essential Starter Pro, paleta de sombras de ojos, maquillaje con brillo de labios, kits de maquillaje para mujer, kit de maquillaje para Navidad y Halloween",
+        "precio": 21780,
+        "stock": 12,
+        "imagen": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/513Rk7H2jYL.jpg",
+        "categoria": "maquillaje"
+    },
+    {
+        "id": 2,
+        "nombre": "MASCARA UNA SECRET",
+        "descripcion": "Pestañas con volumen, alargamiento, curvatura y definición extremos desde la primera capa* Innovador pincel giratorio 180°, para lograr un acabado personalizado y alcanzar todos los ángulos de tus pestañas. Fórmula de larga duración y de fácil remoción.",
+        "precio": 5900,
+        "stock": 7,
+        "imagen": "https://production.na01.natura.com/on/demandware.static/-/Sites-natura-ar-storefront-catalog/default/dw3d79790e/1200x1200/106124_1.jpg",
+        "categoria": "maquillaje"
+    },
+    {
+        "id": 3,
+        "nombre": "KIT INICIAL",
+        "descripcion": "Kit Inicial X42 Completo Cabina Torno Esmaltados Uñas Semipermanentes",
+        "precio": 16000,
+        "stock": 10,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_704086-MLA51560753886_092022-F.webp",
+        "categoria": "uñas"
+    }
+]

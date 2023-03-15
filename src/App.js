@@ -1,17 +1,26 @@
 import React from 'react';
-import NavBar from './components/NavBar.jsx';
 import Local from './components/Local.jsx';
-// import ItemListContainer from './components/ItemListContainer.jsx';
+import { ItemListContainer } from './components/ItemListContainer'
 import './App.css';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import NavBar from './components/NavBar.jsx';
 
 export default function App() {
     return (
     <>
-        <NavBar background={'transparent'} />
-        <Local title="Sofía Spertino" />
-        {/* <Hero title="Batman Store" /> */}
-        {/* <ItemListContainer greeting= "Lista de Productos"/> */}
-
+        <BrowserRouter>
+            <div>
+                <NavBar/>
+                <Routes>
+                    {/* <Route path='/' element={<Local/>}/> */}
+                    {/* <Route path="/productos/" element={<ItemListContainer />}/> */}
+                    <Route path="/" element={<ItemListContainer />}/>
+                    <Route path="/productos/:tipoProducto" element={<ItemListContainer />}/>
+                    <Route path="/item/:productId" element={<ItemDetailContainer/>}/> 
+                </Routes>
+            </div>
+        </BrowserRouter>
     </>
     );
 }
