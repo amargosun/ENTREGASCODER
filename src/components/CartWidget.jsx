@@ -1,17 +1,24 @@
-import React from 'react';
+// import Carrito from '../../assets/carrito.png';
+import {Link} from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+export const CartWidget = ()=>{
+    const {getTotalProducts, productCartList} = useContext(CartContext);
 
-import './styles/CartWidget.css';
-
-const CartWidget = () => {
-    return (
-        <div className="cart-widget">
-            <FontAwesomeIcon icon={faShoppingBasket} size="2x" color="rgb(154, 113, 74)" opacity='0.7' />
-            <div className="qty-display">0</div>
+    return(
+        <div>
+            {
+                productCartList.length>0 &&
+                <>
+                    <Link to="/cart">
+                        <img src={`/assets/carrito.png`} alt="mario" style={{width:20}}/>
+                    </Link>
+                    <span style={{backgroundColor: 'white', borderRadius:"50%", width:"10px", heigth:"10px", fontSize:"10px", color:"black"}}>
+                        {getTotalProducts()}
+                    </span>
+                </>
+            }
         </div>
-    );
-};
-
-export default CartWidget;
+    )
+}

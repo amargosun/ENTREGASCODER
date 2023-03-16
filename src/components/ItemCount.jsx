@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import './styles/ItemCount.css';
 
-export const ItemCount = ({stock, initial, onAdd})=>{
+export const ItemCount = ({ initial, stock, onAdd})=>{
     const [count, setCount] = useState(initial);
 
     const decrementar = ()=>{
