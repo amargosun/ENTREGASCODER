@@ -1,0 +1,21 @@
+.ped-fondo{
+    background-color: rgb(224, 229, 204);
+}
+.cart-vacio{
+    background-color: rgb(224, 229, 204);
+    text-align: center;
+}
+.ped-total{
+    text-align: right;
+    padding-right: 10px;
+}
+.boton-confirmar{
+    height: 40px;
+}
+.confirmar{
+    text-align: center;
+}
+.hacer-compra{
+    text-align: center;
+    height: 30px;
+}

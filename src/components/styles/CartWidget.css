@@ -1,7 +1,9 @@
+.cw-cont{
+    background-color: rgb(224, 229, 204);
+}
 .cart {
     width: 65%;
 }
-
 .cart-widget {
     position: relative;
     cursor: pointer;

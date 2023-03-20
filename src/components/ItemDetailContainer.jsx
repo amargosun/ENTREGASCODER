@@ -20,10 +20,11 @@ function ItemDetailContainer() {
 
     return (
         <section id="menu" className="text-center container">
-        
         <div className="container">
-            <div className="">
-                {producto ? <ItemDetail item={producto} />  : <h1>Cargando...</h1>}
+            <div className="item-detail-container">
+                {producto ? <ItemDetail item={producto} />  
+                : 
+                <h1></h1>}
             </div>
         </div>
         </section>

@@ -1,8 +1,8 @@
 .cart-item-container{
+    padding-top: 50px;
+    padding-bottom: 15px;
     background-color: rgb(224, 229, 204);
-    width: 60%;
-    border-radius: 10px;
-    margin: 10px auto; 
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;

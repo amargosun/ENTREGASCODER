@@ -1,0 +1,13 @@
+.cart-cont{
+    background-color: rgb(224, 229, 204);
+}
+.sin-productos{
+    background-color: rgb(224, 229, 204);
+}
+.vaciar-carrito, .boton-siguiente{
+    height: 40px;
+    width: 220px;
+}
+.botones{
+    text-align: center;
+}

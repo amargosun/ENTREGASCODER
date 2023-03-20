@@ -1,5 +1,5 @@
 import React from 'react';
-// import { CartWidget } from './CartWidget';
+import { CartWidget } from './CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter as NavLink, Link } from 'react-router-dom';
@@ -40,7 +40,7 @@ const NavBar = ({ background }) => {
                         <Link to="/">Contacto</Link>
                     </li>
                     <div className='cart'>
-                        {/* <CartWidget /> */}
+                        <CartWidget />
                     </div>
                 </ul>
             </div>
