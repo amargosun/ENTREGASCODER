@@ -5,6 +5,8 @@ export const CartContext = createContext();
 
 export const CartProvider = ({children})=>{
     const [productCartList, setProductCartList] = useState([]);
+    const [formularioValido, setFormularioValido] = useState(false)
+    console.log(formularioValido);
     const suma = productCartList.reduce((acumulador, item) => acumulador + item.totalPrice,0)
     const order = {
         cliente: {
@@ -67,9 +69,17 @@ export const CartProvider = ({children})=>{
     //     ))
     // }
 
+    const validarEmail = (email, email2) => {
+        let valido = false;
+        if (email === email2) {
+            valido = true;
+        }
+        setFormularioValido(valido)
+    };
+
     return(
-        <CartContext.Provider value={{productCartList, suma, addProduct, 
-        removeProduct, clearProductCartList, isInCart, getTotalProducts, grabarOrden}}>
+        <CartContext.Provider value={{productCartList, suma, formularioValido, addProduct, 
+        removeProduct, clearProductCartList, isInCart, getTotalProducts, grabarOrden, validarEmail}}>
             {children}
         </CartContext.Provider>
     )
