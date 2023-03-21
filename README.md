@@ -1,5 +1,19 @@
+Este proyecto de ecommerce fue creado, en principio, para la venta de productos de cosmética, para el negocio "Sofia Spertino Espacio de Belleza", Sofia es mi hija y tiene un espacio de servicios y ademas venta de productos del rubro. 
+
 # Getting Started with Create React App
 
+```
+@fortawesome/fontawesome-svg-core
+@fortawesome/free-solid-svg-icons
+@fortawesome/react-fontawesome
+bootstrap
+firebase
+react
+react-bootstrap
+react-dom
+react-router-dom
+react-scripts
+```
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

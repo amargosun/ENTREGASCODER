@@ -6,7 +6,7 @@ import {PedidoDetalle} from './PedidoDetalle.jsx'
 import './styles/CerrarCompra.css';
 
 export const CerrarCompra = () => {
-    const {productCartList, suma, grabarOrden, validarEmail, formularioValido} = useContext(CartContext);
+    const {productCartList, suma, grabarOrden, validarEmail, formularioValido, datosClie} = useContext(CartContext);
     if (productCartList.length === 0){
         return (
             <>
@@ -29,7 +29,7 @@ export const CerrarCompra = () => {
             <div className='ped-fondo'>
                 <br />        
                 <br />        
-                <div className='ped-titulo'>Orden de Pedido </div>
+                <div className='ped-titulo'>Orden de Pedido</div>
                 {
                     productCartList.map(item=>(<PedidoDetalle key={item.id} item={item}/>))
                 }
@@ -37,22 +37,23 @@ export const CerrarCompra = () => {
                     <p className='ped-total'>TOTAL COMPRA {suma}</p>
                     <div className='confirmar'>
                         <hr />
-                        <form name='f1' onSubmit={validarEmail(email, email2)}>
+                        <form name='f1'>
                             <label>Nombre:</label><br />
-                            <input type="text" id="nombre" name="nombre"/><br />
+                            <input type="text" id="nombre" name="nombre" onChange={datosClie}/><br />
                             <label>Apellido:</label><br />
-                            <input type="text" id="apellido" name="apellido"/><br />
+                            <input type="text" id="apellido" name="apellido" onChange={datosClie}/><br />
                             <label>Teléfono:</label><br />
-                            <input type="tel" id="telefono" name="telefono"/><br />
+                            <input type="tel" id="telefono" name="telefono" onChange={datosClie}/><br />
                             <label>E-mail:</label><br />
-                            <input type="email" id="email" name="email"/><br />
+                            <input type="email" id="email" name="email" onKeyUp={validarEmail} onChange={datosClie}/><br />
                             <label>Confirmar e-mail:</label><br />
-                            <input type="email" id="email2" name="email2" />
-                            <button type="submit"> Enviar </button>
+                            <input type="email" id="email2" name="email2" onKeyUp={validarEmail}/><br />
                         </form>
-                        <Link to='/'>    
-                            <button className='boton-confirmar' disabled={(formularioValido) ? false : true} onClick={grabarOrden}>Confirmar Compra</button>
-                        </Link>
+                        <div className='cont-boton-confirmar'>   
+                            <Link to='/muestraidcompra'> 
+                                <button className='boton-confirmar' disabled={(formularioValido) ? false : true} onClick={grabarOrden}>Confirmar Compra</button>
+                            </Link>
+                        </div>
                     </div>
                 </div> 
             </div> 

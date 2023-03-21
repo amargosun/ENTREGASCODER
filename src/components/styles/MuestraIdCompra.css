@@ -1,0 +1,12 @@
+.cont-id{
+    background-color: rgb(224, 229, 204);
+    text-align: center;
+}
+
+.mensaje-id{
+    color: red;
+    text-align: center;
+}
+.volver{
+    height: 30px;
+}

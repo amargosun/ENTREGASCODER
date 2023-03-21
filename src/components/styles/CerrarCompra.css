@@ -9,6 +9,9 @@
     text-align: right;
     padding-right: 10px;
 }
+.cont-boton-confirmar{
+    padding-top: 20px;
+}
 .boton-confirmar{
     height: 40px;
 }
